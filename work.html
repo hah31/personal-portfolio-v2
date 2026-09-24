@@ -8,89 +8,77 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@700&family=Geist+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav aria-label="Main">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="work.html" aria-current="page">Work</a></li>
-        <li><a href="story.html">Story</a></li>
-        <li><a href="hot-takes.html">Hot takes</a></li>
-        <li><a href="writing.html">Writing</a></li>
-        <li><a href="resume.pdf">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+  <main class="page">
+    <a class="back-link" href="index.html">← back to home</a>
+    <h1 class="page-title">Work</h1>
+    <p class="page-intro">Things I've built or helped build.</p>
+    <div class="proj-list">
+      <article class="proj-item">
+        <div class="proj-head">
+          <h2 class="proj-name">Fermilab</h2>
+          <span class="proj-date">Summer 2026</span>
+        </div>
+        <p class="proj-role">AI research intern · limiting AI hallucinations with semantic knowledge graphs</p>
+        <p>Our team modeled the MI-8 target and the CMS detector in OML, then gave an LLM tools to query them with SPARQL.</p>
+        <p>My part: I wrote our own benchmark, since models often train on public ones, and wrote OML vocabularies for our models.</p>
+        <p><a class="inline-link" href="fermilab-slides.pdf">Project slides</a> (PDF, cleared by Fermilab for public release)</p>
+        <img class="shot shot-tall" src="images/fermilab-feynman-center.jpg" width="480" height="600" loading="lazy" decoding="async" alt="Hash at Fermilab's Feynman Computing Center">
+      </article>
+      <article class="proj-item">
+        <div class="proj-head">
+          <h2 class="proj-name">Elimenti</h2>
+          <span class="proj-date">2026 – now</span>
+        </div>
+        <p class="proj-role">founder · web design studio</p>
+        <p>I hand-code static websites for local businesses that compete on quality and design, and I maintain existing sites for others. Started as Step One Sites, renamed Elimenti in April 2026.</p>
+        <p><!-- TODO: link "1 of 1 Car Club" to https://1of1carclub.com once that site is fixed -->
+        Built elimenti.com and the site for my first client, 1 of 1 Car Club.</p>
+        <p><a class="inline-link" href="https://elimenti.com">elimenti.com</a></p>
+        <a class="shot-link" href="https://elimenti.com"><img class="shot" src="images/elimenti-home.jpg" width="720" height="411" loading="lazy" decoding="async" alt="Homepage of elimenti.com"></a>
+      </article>
+      <article class="proj-item">
+        <div class="proj-head">
+          <h2 class="proj-name">Vitesse</h2>
+          <span class="proj-date">2024 – 2025</span>
+        </div>
+        <p class="proj-role">founder · automotive media and clothing</p>
+        <p>I started an automotive media brand that also sold clothing.</p>
+        <p><a class="inline-link" href="https://www.instagram.com/vitesse.automotive/">@vitesse.automotive</a></p>
+        <div class="proj-stats">
+          <div><div class="stat-num">20M+</div><div class="stat-label">Organic views</div></div>
+        </div>
+        <a class="shot-link" href="https://www.instagram.com/p/DEzqUlqxdBx/"><img class="shot" src="images/vitesse-top-post.jpg" width="720" height="457" loading="lazy" decoding="async" alt="Screenshot of Vitesse's most-viewed Instagram post showing its view count"></a>
+      </article>
+      <article class="proj-item">
+        <div class="proj-head">
+          <h2 class="proj-name">Red Devils Garage</h2>
+          <span class="proj-date">2024 – 2025</span>
+        </div>
+        <p class="proj-role">co-founder · car club</p>
+        <p>I co-founded a car club and organized a charity car meet for HCS Family Services.</p>
+        <p><a class="inline-link" href="https://www.instagram.com/reddevilsgarage/">@reddevilsgarage</a></p>
+        <div class="proj-stats">
+          <div><div class="stat-num">60+</div><div class="stat-label">Members</div></div>
+          <div><div class="stat-num">200+</div><div class="stat-label">Cars at the meet</div></div>
+          <div><div class="stat-num">$10K+</div><div class="stat-label">Raised</div></div>
+        </div>
+        <img class="shot" src="images/red-devils-charity-meet.jpg" width="720" height="408" loading="lazy" decoding="async" alt="Rows of cars parked at the Red Devils Garage charity meet">
+      </article>
+    </div>
 
-  <main>
-    <h1>Work</h1>
-    <p class="lede">Things I've built or helped build.</p>
-
-    <article class="entry">
-      <div class="entry-head">
-        <h2>Limiting AI Hallucinations with Semantic Knowledge Graphs</h2>
-        <p class="entry-date">Summer 2026</p>
-      </div>
-      <p class="entry-meta">Fermilab · AI Research Intern</p>
-      <p>Our team modeled the MI-8 target and the CMS detector in OML, then gave an LLM tools to query them with SPARQL.</p>
-      <p>My part: I wrote our own benchmark, since models often train on public ones, and wrote OML vocabularies for our models.</p>
-      <p><a href="fermilab-slides.pdf">Project slides (PDF, cleared by Fermilab for public release) →</a></p>
-      <img class="shot shot-tall" src="images/fermilab-feynman-center.jpg" width="480" height="600" loading="lazy" decoding="async" alt="Hash at Fermilab's Feynman Computing Center">
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <h2>Elimenti</h2>
-        <p class="entry-date">2026–now</p>
-      </div>
-      <p class="entry-meta">Web design studio · Founder</p>
-      <p>I hand-code static websites for local businesses that compete on quality and design, and I maintain existing sites for others. Started as Step One Sites, renamed Elimenti in April 2026.</p>
-      <!-- TODO: link "1 of 1 Car Club" to https://1of1carclub.com once that site is fixed -->
-      <p>Built elimenti.com and the site for my first client, 1 of 1 Car Club.</p>
-      <p><a href="https://elimenti.com">elimenti.com →</a></p>
-      <a class="shot-link" href="https://elimenti.com"><img class="shot" src="images/elimenti-home.jpg" width="720" height="411" loading="lazy" decoding="async" alt="Homepage of elimenti.com"></a>
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <h2>Vitesse</h2>
-        <p class="entry-date">2024–2025</p>
-      </div>
-      <p class="entry-meta">Automotive media and clothing · Founder</p>
-      <p>I started an automotive media brand that also sold clothing. 20M organic views on Instagram alone.</p>
-      <p><a href="https://www.instagram.com/vitesse.automotive/">@vitesse.automotive →</a></p>
-      <a class="shot-link" href="https://www.instagram.com/p/DEzqUlqxdBx/"><img class="shot" src="images/vitesse-top-post.jpg" width="720" height="457" loading="lazy" decoding="async" alt="Screenshot of Vitesse's most-viewed Instagram post showing its view count"></a>
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <h2>Red Devils Garage</h2>
-        <p class="entry-date">2024–2025</p>
-      </div>
-      <p class="entry-meta">Car club · Co-founder</p>
-      <p>I co-founded a 60+ member car club and organized a charity car meet for HCS Family Services. 200+ cars showed up and we raised $10K+.</p>
-      <p><a href="https://www.instagram.com/reddevilsgarage/">@reddevilsgarage →</a></p>
-      <img class="shot" src="images/red-devils-charity-meet.jpg" width="720" height="408" loading="lazy" decoding="async" alt="Rows of cars parked at the Red Devils Garage charity meet">
-    </article>
-
-    <section>
-      <h2>Timeline</h2>
-      <ul class="timeline">
-        <li><span class="entry-date">2026–now</span><span>B.S. Mechanical Engineering, The Grainger College of Engineering, UIUC. Started with 53 credits from AP exams.</span></li>
-        <li><span class="entry-date">Summer 2026</span><span>AI Research Intern, Fermilab</span></li>
-        <li><span class="entry-date">2026</span><span>Started Step One Sites, renamed it Elimenti in April</span></li>
-        <li><span class="entry-date">Summer 2025</span><span>Research and design intern, Northwestern University Transplant Center</span></li>
-        <li><span class="entry-date">2024–now</span><span>Creative direction, Burdi Clothing, Hinsdale. Took over maintaining their website in 2025.</span></li>
-      </ul>
-    </section>
+    <h2 class="section-title">Timeline</h2>
+    <ul class="timeline">
+      <li><span class="year">2026 – now</span><p class="entry-body">B.S. Mechanical Engineering, The Grainger College of Engineering, UIUC. Started with 53 credits from AP exams.</p></li>
+      <li><span class="year">Summer 2026</span><p class="entry-body">AI Research Intern, Fermilab</p></li>
+      <li><span class="year">2026</span><p class="entry-body">Started Step One Sites, renamed it Elimenti in April</p></li>
+      <li><span class="year">Summer 2025</span><p class="entry-body">Research and design intern, Northwestern University Transplant Center</p></li>
+      <li><span class="year">2024 – now</span><p class="entry-body">Creative direction, Burdi Clothing, Hinsdale. Took over maintaining their website in 2025.</p></li>
+      <li><span class="year">High school</span><p class="entry-body">Cross country and track, 120+ races. Best mile: 4:57</p></li>
+    </ul>
   </main>
-
-  <footer class="site-footer">
-    <p><a href="mailto:hashim.hassan.us@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/hashimhassan/">LinkedIn</a> · <a href="https://www.instagram.com/hashimh6ssan">Instagram</a> · <a href="resume.pdf">Resume</a></p>
-    <p class="muted">© 2026 Hashim Hassan</p>
-  </footer>
 </body>
 </html>

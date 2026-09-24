@@ -18,76 +18,42 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@700&family=Geist+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav aria-label="Main">
-      <ul class="nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="story.html">Story</a></li>
-        <li><a href="hot-takes.html">Hot takes</a></li>
-        <li><a href="writing.html">Writing</a></li>
-        <li><a href="resume.pdf">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+  <main class="home">
+    <div class="home-inner">
+      <div class="header">
+        <img class="avatar" src="images/headshot.jpg" width="480" height="600" alt="Hashim Hassan">
+        <h1 class="name">Hashim Hassan</h1>
+        <p class="subtitle">founder, <a class="link-blue" href="https://elimenti.com">elimenti</a></p>
+        <p class="subtitle italic">mech e @ uiuc. prev ai research intern @ fermilab.</p>
+        <a class="subtitle email" href="mailto:hashim.hassan.us@gmail.com">&gt; hashim.hassan.us@gmail.com</a>
+      </div>
 
-  <main>
-    <section class="intro">
-      <img class="headshot" src="images/headshot.jpg" width="480" height="600" alt="Hashim Hassan">
-      <h1>Hashim Hassan</h1>
-      <p class="lede">Mechanical engineering at UIUC. Founder of <a href="https://elimenti.com">Elimenti</a>.</p>
-      <p>Hey, I'm Hash. I'm a freshman from the western Chicago suburbs. I run every part of Elimenti myself, from cold outreach to invoicing. This past summer I was one of three students on a Fermilab project, trying to get AI models to answer from real documentation instead of making things up.</p>
-    </section>
+      <div class="divider"></div>
 
-    <section>
-      <h2>Currently</h2>
-      <ul class="plain">
-        <li>Building <a href="https://elimenti.com">Elimenti</a>, a web design studio for businesses that compete on quality and design</li>
-        <li>Freshman in Mechanical Engineering at UIUC (class of 2030)</li>
-        <li>Community team at Founders: Illinois Entrepreneurs</li>
-        <li>Creative direction for <a href="https://www.instagram.com/burdiclothing">Burdi Clothing</a> in Hinsdale</li>
-        <li>Looking for an early-stage startup where I can own a project end to end</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Previously</h2>
-      <ul class="plain">
-        <li>AI Research Intern at Fermilab, working on limiting LLM hallucinations with knowledge graphs</li>
-        <li>Research and design intern at the Northwestern University Transplant Center</li>
-        <li>Founded <a href="https://www.instagram.com/vitesse.automotive/">Vitesse</a>, an automotive media brand: 20M+ organic views</li>
-        <li>Co-founded <a href="https://www.instagram.com/reddevilsgarage/">Red Devils Garage</a>: 200+ car charity meet, $10K+ raised</li>
-        <li>Ran cross country and track through high school, 120+ races. Best mile: 4:57</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>More of me</h2>
-      <ul class="index-list">
-        <li><a href="work.html">Work</a><span>Projects, with the details</span></li>
-        <li><a href="now.html">Now</a><span>What I'm focused on this month</span></li>
-        <li><a href="story.html">My story</a><span>How I got here</span></li>
-        <li><a href="pivotal-moments.html">Pivotal moments</a><span>The handful of things that changed my direction</span></li>
-        <li><a href="hot-takes.html">Hot takes</a><span>Opinions I'll defend</span></li>
-        <li><a href="writing.html">Writing</a><span>Essays and notes</span></li>
-        <li><a href="resources.html">Resources</a><span>Stuff I wish I knew about sooner</span></li>
-        <li><a href="bookshelf.html">Bookshelf</a><span>What I'm reading and what stuck</span></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Say hi</h2>
-      <p>Email is the fastest way to reach me: <a href="mailto:hashim.hassan.us@gmail.com">hashim.hassan.us@gmail.com</a></p>
-    </section>
+      <nav class="links" aria-label="Main">
+        <div class="col">
+          <a class="link" href="now.html">&gt; now</a>
+          <a class="link" href="story.html">&gt; my story</a>
+          <a class="link sublink" href="pivotal-moments.html">&gt; pivotal moments</a>
+          <a class="link" href="work.html">&gt; work</a>
+          <a class="link" href="hot-takes.html">&gt; hot takes</a>
+          <a class="link" href="quotes.html">&gt; quotes i've saved</a>
+          <a class="link" href="resources.html">&gt; resources</a>
+          <a class="link" href="cars.html">&gt; my favorite cars</a>
+        </div>
+        <div class="col">
+          <a class="link" href="https://www.linkedin.com/in/hashimhassan/">&gt; linkedin</a>
+          <a class="link" href="https://www.instagram.com/hashimh6ssan">&gt; instagram</a>
+          <a class="link" href="resume.pdf">&gt; resume</a>
+          <div class="col-divider"></div>
+          <a class="link" href="https://elimenti.com">&gt; elimenti.com</a>
+        </div>
+      </nav>
+    </div>
   </main>
-
-  <footer class="site-footer">
-    <p><a href="mailto:hashim.hassan.us@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/hashimhassan/">LinkedIn</a> · <a href="https://www.instagram.com/hashimh6ssan">Instagram</a> · <a href="resume.pdf">Resume</a></p>
-    <p class="muted">© 2026 Hashim Hassan</p>
-  </footer>
 </body>
 </html>
