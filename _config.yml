@@ -1,0 +1,3 @@
+# GitHub Pages runs Jekyll, which would publish README.md as a page. Keep it out.
+exclude:
+  - README.md

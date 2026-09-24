@@ -1,0 +1,386 @@
+/* hashim-hassan.com, v2
+   One narrow column, lots of white space, text first.
+   Every color, font and size lives in :root, so restyling means editing that block. */
+
+:root {
+  --bg: #ffffff;
+  --text: #171717;
+  --muted: #737373;
+  --rule: #e7e7e7;
+  --accent: #1f4a38; /* racing green, carried over from v1: hover + current page */
+
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --measure: 600px;
+  --gutter: 20px;
+  --section-gap: 56px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --text: #ededed;
+    --muted: #8f8f8f;
+    --rule: #2a2a2a;
+    --accent: #7fbf9f;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+
+/* ---------- layout ---------- */
+
+.site-header,
+main,
+.site-footer {
+  max-width: calc(var(--measure) + var(--gutter) * 2);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+
+/* ---------- nav ---------- */
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin: 0;
+  padding: 40px 0 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--text);
+}
+
+
+/* ---------- type ---------- */
+
+main {
+  padding-top: 72px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+.lede {
+  font-size: 17px;
+  color: var(--muted);
+}
+
+main > section {
+  margin-top: var(--section-gap);
+}
+
+
+/* ---------- home ---------- */
+
+.headshot {
+  width: 88px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  background: var(--rule);
+}
+
+.plain {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plain li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.plain li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+.plain li + li {
+  margin-top: 6px;
+}
+
+/* "More of me": page name on the left, one-liner on the right */
+.index-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+
+.index-list li {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 0 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.index-list a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.index-list span {
+  color: var(--muted);
+}
+
+
+/* ---------- work ---------- */
+
+.entry {
+  margin-top: var(--section-gap);
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2px 16px;
+}
+
+.entry h2 {
+  margin: 0 0 2px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.entry-date {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-meta {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.entry > :last-child {
+  margin-bottom: 0;
+}
+
+.shot {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--rule);
+}
+
+.shot-tall {
+  max-width: 240px;
+}
+
+.shot-link {
+  display: block;
+}
+
+.shot-link .shot {
+  transition: border-color 150ms ease;
+}
+
+.shot-link:hover .shot {
+  border-color: var(--accent);
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0 16px;
+}
+
+.timeline li + li {
+  margin-top: 10px;
+}
+
+.timeline .entry-date {
+  padding-top: 2px;
+}
+
+
+/* ---------- now + placeholder pages ---------- */
+
+.now-list {
+  margin: 32px 0 0;
+  padding-left: 1.1em;
+}
+
+.now-list li + li {
+  margin-top: 8px;
+}
+
+.now-list li::marker {
+  color: var(--muted);
+}
+
+.coming-soon {
+  margin-top: 40px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.back {
+  margin-top: var(--section-gap);
+  font-size: 14px;
+}
+
+.back a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back a:hover {
+  color: var(--text);
+}
+
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  margin-top: 96px;
+  padding-bottom: 48px;
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer p:first-child {
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 4px;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--text);
+}
+
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 639px) {
+  :root {
+    --section-gap: 44px;
+  }
+
+  .nav-links {
+    padding-top: 24px;
+  }
+
+  main {
+    padding-top: 48px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  /* one-liners drop under the page name */
+  .index-list li,
+  .timeline li {
+    grid-template-columns: 1fr;
+  }
+}
