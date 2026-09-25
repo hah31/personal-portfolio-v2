@@ -26,7 +26,8 @@ Subpages have no nav, just a "← back to home" link, so there's nothing else to
 
 Modeled on atjasonwang.com and austnkennedy.com: Geist Mono body, Geist for page titles,
 zinc greys, blue for outbound links, centered home page. All colors, fonts and widths are
-variables at the top of `style.css` (`:root`). Dark mode follows the visitor's system setting.
+variables at the top of `style.css` (`:root`). Always light: `color-scheme: only light` also opts out of browser auto-dark modes.
+When you change `style.css`, bump the `?v=` number on its `<link>` in every page so browsers drop the cached copy.
 
 ## Going live
 
