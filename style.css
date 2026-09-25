@@ -1,15 +1,17 @@
 /* hashim-hassan.com, v2
    Styled after atjasonwang.com and austnkennedy.com: Geist Mono, zinc greys,
    one blue for outbound links, a centered home page and plain text subpages.
-   Every color, font and size lives in :root, so restyling means editing that block. */
+   Every color, font and size lives in :root, so restyling means editing that block.
+   Always light: off-white background, near-black text, no dark mode. */
 
 :root {
-  --bg: #ffffff;
+  color-scheme: light;
+  --bg: #fafaf9;          /* stone-50: off-white, not pure white */
   --text: #18181b;        /* zinc-900 */
   --muted: #71717a;       /* zinc-500 */
   --faint: #a1a1aa;       /* zinc-400: dates, back link, stat labels */
-  --rule: #f4f4f5;        /* zinc-100: dividers */
-  --border: #e4e4e7;      /* zinc-200: cards, screenshots */
+  --rule: #e7e5e4;        /* stone-200: dividers, visible on off-white */
+  --border: #d6d3d1;      /* stone-300: cards, screenshots */
   --underline: #d4d4d8;   /* zinc-300 */
   --link: #3b82f6;        /* blue-500 */
 
@@ -18,19 +20,6 @@
 
   --home-width: 640px;
   --page-width: 42rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #09090b;
-    --text: #fafafa;
-    --muted: #a1a1aa;
-    --faint: #71717a;
-    --rule: #27272a;
-    --border: #3f3f46;
-    --underline: #52525b;
-    --link: #60a5fa;
-  }
 }
 
 *,
