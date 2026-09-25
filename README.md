@@ -10,11 +10,10 @@ Static HTML/CSS. No build step. Open any `.html` file in a browser to preview.
 | `work.html` | Project cards (stats + screenshots) + timeline | Filled |
 | `now.html` | What I'm focused on this month | Filled |
 | `story.html` | My story | Intro only |
-| `pivotal-moments.html` | Pivotal moments | Coming soon |
-| `hot-takes.html` | Hot takes | Coming soon |
-| `quotes.html` | Quotes I've saved | Coming soon |
-| `resources.html` | Stuff I wish I knew about sooner | Coming soon |
-| `cars.html` | My favorite cars | Coming soon |
+| `hot-takes.html` | Hot takes | Filled |
+| `quotes.html` | Quotes I've saved | Filled |
+| `resources.html` | Stuff I wish I knew about sooner | Filled |
+| `cars.html` | My favorite cars | Filled |
 
 To fill a placeholder page, replace the `<p class="coming-soon">coming soon.</p>` line with
 your copy: wrap paragraphs in `<div class="prose">…</div>`, use `<ul class="dash-list">` for
